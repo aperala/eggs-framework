@@ -1,19 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/main.js"></script>
+  <title>The Eggs Framework</title>
 </head>
 <body>
-  <h1>Rounded button</h1>
-  <p>Create a rounded button with "@include rounded-button([radius in px])"</p>
-  <div id='example-rounded'> Click Me </div>
+  <header>
+    <nav class = "fixed-top-nav">
+      <ul>
+        <li>
+          <a href="#">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            About
+           </a>
+        </li>
+        <li>
+          <a href="#">
+            Press
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-  <h1>Vertically centered element</h1>
-  <p>Create a vertically centered element "@include vertically-centered-element"</p>
-  <div id="example-centered-wrapper">
-    <div id='example-centered'>
-      
+  </header>
+  <div class = "crate">
+
+    <div class="crate outline">
+      <div class="row">
+        <div class="col-6">
+          <h1 class = "page-header">The Eggs Framework</h1>
+          <p>This is a "col-6" full-width div</p>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <h6>h6 header</h6>
+        <h5>h5 header</h5>
+        <h4>h4 header</h4>
+        <h3>h3 header</h3>
+        <h2>h2 header</h2>        
+        <h1>h1 header</h1>
+        <h2>h2 header</h2>
+        <h3>h3 header</h3>
+        <h4>h4 header</h4>
+        <h5>h5 header</h5>
+        <h6>h6 header</h6>
+      </div>
+
+      <div class="col-1">
+        <p>Create a rounded button with '@include rounded-button(radius in px).'</p>
+        <div id="example-rounded"> Click Me </div>
+      </div>
+
+      <div class="col-2">
+        <p>
+          Vertically centered element in a col-2 div
+        </p>
+        <div id="example-centered-wrapper">
+          <div id='example-centered'>
+        
+          </div>
+        </div>
+      </div>
+
+<!-- Grid Layout -->
+      <div class="row">
+          <div class="col-1"><p>col-1</p></div> 
+          <div class="col-1"><p>col-1</p></div> 
+          <div class="col-1"><p>col-1</p></div> 
+          <div class="col-1"><p>col-1</p></div> 
+          <div class="col-1"><p>col-1</p></div> 
+          <div class="col-1"><p>col-1</p></div> 
+      </div> 
+      <div class="row">
+          <div class="col-2">
+            <div class="dd-button">
+              <span class="dd-button-label">
+                Show Element
+              </span>
+            </div>
+            <div class="drop-down-element">
+              This element toggles open on the button click.
+            </div>
+
+          </div> 
+          <div class="col-2"><p>col-2</p></div> 
+          <div class="col-2">
+            <aside>
+              <h5 class="sidebar-header">Sidebar List</h5>
+              <ul class = "sidebar">
+                <li class="sidebar-li">List items use class "sidebar-li"</li>
+                <li class="sidebar-li">List item</li>
+                <li class="sidebar-li">List item</li>
+                <li class="sidebar-li">List item</li>
+                <li class="sidebar-li">List item</li>
+                <li class="sidebar-li">List item</li>
+                <li class="sidebar-li">List item</li>
+              </ul>
+            </aside>
+          </div> 
+      </div> 
+      <div class="row">
+          <div class="col-3"><p>col-3</p></div> 
+          <div class="col-3"><p>col-3</p></div> 
+      </div> 
     </div>
+
   </div>
 </body>
 </html>

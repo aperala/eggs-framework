@@ -1,0 +1,84 @@
+@import "grid";
+
+// set h1-h6 font sizes
+@for $i from 1 through 6 {
+  h#{$i} { font-size: (64-($i * 8)+ px); font-weight: bold}
+}
+
+body {
+  // padding-top: 40px;
+  @include speckled-egg-background($default-main-color, 0.2, 0.2);
+  font-family: 'Josefin Sans', sans-serif;
+  color: $default-font-color;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+// classes start here
+.drop-down-element {
+  display: none;
+}
+
+.fixed-top-nav {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  @include navbar-background($default-main-color);
+
+    ul {
+      padding-top: .5em;
+      padding-left: 1em;
+      list-style-type: none;
+      font-size: 22px;
+    }
+
+    li {
+      display: inline;
+      margin-right: 1em;
+    }
+
+    a {
+      padding: .3em;
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        @include border-radius(5px);
+        font-weight: bold;
+        background-color: #fff;
+        color: darken($default-main-color, 50%);
+      }
+    }
+}
+
+.page-header {
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.sidebar {
+  padding-bottom: .5em;
+  padding-top: .5em;
+  text-align: left;
+  list-style-position: inside;
+  border: 1px solid darken($default-main-color, 80%);
+}
+
+.sidebar-header {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-bottom: .3em;
+  text-align: center;
+  background-color: darken($default-main-color, 10%);
+  color: darken($default-main-color, 80%);
+}
+
+.sidebar-li {
+  padding-left: 2em;
+  line-height: 1.3em;
+}

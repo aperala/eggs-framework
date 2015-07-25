@@ -1,7 +1,34 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin navbar-background($default-main-color) {
+  background-color: darken($default-main-color, 60%);
+}
+
 @mixin rounded-button($radius) {
   cursor: pointer;
   border-radius: $radius;
+  padding: 5px 2px;
   text-align: center;
+  background-color: darken($default-main-color, 50%);
+  color: white;
+    &:hover {
+      background-color: darken($default-main-color, 90%);
+    }
+}
+
+// background uses .png image file. User can customize with other .png images
+// e.g., at subtlepatterns.com
+@mixin speckled-egg-background($default-main-color, $opacity1, $opacity2) {
+  background :
+    linear-gradient(
+      rgba($default-main-color, $opacity1),
+      rgba($default-main-color, $opacity2)
+      ),
+    url("../images/speckles.png");
 }
 
 @mixin vertically-centered-element {
@@ -9,3 +36,5 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+

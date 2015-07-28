@@ -1,13 +1,18 @@
-function ToggleElement(){
-  var isVisible = $( ".drop-down-element" ).is( ":visible" );
-  var isHidden = $( ".drop-down-element" ).is( ":hidden" );
+function HideElement(){
+  $( ".dd-button-label" ).text( "Hide" );
+}
 
+function ShowElement(){
+  $( ".dd-button-label" ).text( "Show" );
+}
+
+function ToggleElement(){
   $(".dd-button").on('click', function(){
     $(".drop-down-element").toggle();
-    if(isHidden === true) {
-      isVisible = true;
-    } else {
-      isHidden = true;
+      if($( ".dd-button-label" ).text() == 'Hide'){
+      ShowElement();
+    }else {
+      HideElement();
     }
   });
 }

@@ -2,11 +2,10 @@
 
 // set h1-h6 font sizes
 @for $i from 1 through 6 {
-  h#{$i} { font-size: (64-($i * 8)+ px); font-weight: bold}
+  h#{$i} { font-size: (72-($i * 8)+ px); font-weight: bold}
 }
 
-body {
-  // padding-top: 40px;
+.speckled-egg-theme {
   @include speckled-egg-background($default-main-color, 0.2, 0.2);
   font-family: 'Josefin Sans', sans-serif;
   color: $default-font-color;
@@ -16,9 +15,40 @@ header {
   margin-bottom: 50px;
 }
 
-// classes start here
+form.default-form {
+  padding: 5px;
+  background: $default-paragraph-background;
+
+    input {
+      display: block;
+      line-height: 1.5em;
+      width: 40%;
+      margin-bottom: 10px;
+    }
+
+    input:focus {
+      border: solid 1px $default-main-color;
+      box-shadow: 0 0 5px 2px darken($default-main-color, 40%);
+    }
+
+    input[type="submit"] {
+      @include rounded-button(15px);
+      margin: auto 0 auto auto;
+      width: 80px;
+      border: none;
+    }
+
+    label {
+      float: left;
+      text-align: right;
+      margin-right: 10px;
+      width: 50%;
+    }
+}
+
 .drop-down-element {
   display: none;
+  margin: 0 auto;
 }
 
 .fixed-top-nav {
@@ -26,13 +56,13 @@ header {
   height: 50px;
   position: absolute;
   top: 0;
-  @include navbar-background($default-main-color);
+  @include navbar-default-background($default-main-color);
 
     ul {
       padding-top: .5em;
       padding-left: 1em;
       list-style-type: none;
-      font-size: 22px;
+      font-size: 24px;
     }
 
     li {
@@ -54,6 +84,21 @@ header {
     }
 }
 
+// adjust navbar font size for medium-sized screens
+@media all and (max-width:800px){
+  .fixed-top-nav ul {
+    font-size: 20px;
+  }
+}
+
+// adjust navbar font size for small screens
+@media all and (max-width:650px) {
+  .fixed-top-nav nav ul {
+    margin-right: .5em;
+    font-size: 16px;
+  }
+}
+
 .page-header {
   -webkit-margin-before: 0.67em;
   -webkit-margin-after: 0.67em;
@@ -69,7 +114,7 @@ header {
   border: 1px solid darken($default-main-color, 80%);
 }
 
-.sidebar-header {
+.column-header {
   padding-top: .5em;
   padding-bottom: .5em;
   margin-bottom: .3em;

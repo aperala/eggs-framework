@@ -6,7 +6,7 @@
   <script type="text/javascript" src="javascripts/main.js"></script>
   <title>The Eggs Framework</title>
 </head>
-<body>
+<body class = "speckled-egg-theme">
   <header>
     <nav class = "fixed-top-nav">
       <ul>
@@ -22,7 +22,7 @@
         </li>
         <li>
           <a href="#">
-            Press
+            News
           </a>
         </li>
         <li>
@@ -40,36 +40,59 @@
       <div class="row">
         <div class="col-6">
           <h1 class = "page-header">The Eggs Framework</h1>
-          <p>This is a "col-6" full-width div</p>
+          <p>This framework is built around a 6-column grid with a horizontal navbar. The background and navbar colors are set by giving the body the class "speckled-egg-theme" and setting the default-main-color in _variables.scss. Default font: Google Fonts Josefin Sans.</p>
+        </div>
+      </div>
+      
+<!-- Header samples -->
+      <div class="row">
+        <div class="col-3">
+          <h6>h6 header</h6>
+          <h5>h5 header</h5>
+          <h4>h4 header</h4>
+          <h3>h3 header</h3>
+          <h2>h2 header</h2>        
+          <h1>h1 header</h1>
+          <h2>h2 header</h2>
+          <h3>h3 header</h3>
+          <h4>h4 header</h4>
+          <h5>h5 header</h5>
+          <h6>h6 header</h6>
+        </div>
+
+        <div class="col-1"> </div>
+
+<!-- HTML5 Form -->
+        <div class="col-2">
+          <h6 class="column-header">Sample Form: use class "default-form"</h6>
+            <form action="#", class="default-form">
+            <label for="First Name">First Name:</label>
+            <input type="text", placeholder="first name", required=true>
+            <label for="Last Name">Last Name:</label>
+            <input type="text", placeholder="last name", required=true>
+            <label for="email">E-mail</label>
+            <input type="email", placeholder="e-mail", required=true>
+            <input type="submit">
+          </form>
         </div>
       </div>
 
-      <div class="col-3">
-        <h6>h6 header</h6>
-        <h5>h5 header</h5>
-        <h4>h4 header</h4>
-        <h3>h3 header</h3>
-        <h2>h2 header</h2>        
-        <h1>h1 header</h1>
-        <h2>h2 header</h2>
-        <h3>h3 header</h3>
-        <h4>h4 header</h4>
-        <h5>h5 header</h5>
-        <h6>h6 header</h6>
-      </div>
+<!-- Button sample -->
+      <div class="row">
+        <div class="col-1">
+          <p>Create a rounded button with '@include rounded-button(radius in px)'. This button is contained within a 'col-1' div.</p>
+          <div id="example-rounded"> Click Me </div>
+        </div>
 
-      <div class="col-1">
-        <p>Create a rounded button with '@include rounded-button(radius in px).'</p>
-        <div id="example-rounded"> Click Me </div>
-      </div>
-
-      <div class="col-2">
-        <p>
-          Vertically centered element in a col-2 div
-        </p>
-        <div id="example-centered-wrapper">
-          <div id='example-centered'>
-        
+<!-- Vertically centered element -->
+        <div class="col-2">
+          <p>
+            Create a vertically centered element with '@include vertically-centered-element'. This element is contained in a 'col-2' div.
+          </p>
+          <div id="example-centered-wrapper">
+            <div id='example-centered'>
+          
+            </div>
           </div>
         </div>
       </div>
@@ -85,20 +108,23 @@
       </div> 
       <div class="row">
           <div class="col-2">
+            <h6 class="column-header">Highlight headers: class "column-header"</h6>
+            <p>
+              jQuery drop-down element below uses the classes "dd-button", "dd-button-label", and "drop-down-element"
+            </p>
             <div class="dd-button">
-              <span class="dd-button-label">
-                Show Element
-              </span>
+              <span class="dd-button-label"> Show </span>
             </div>
             <div class="drop-down-element">
               This element toggles open on the button click.
+              Use ".dd-button", ".drop-down-element", ".dd-button-label".
             </div>
 
           </div> 
           <div class="col-2"><p>col-2</p></div> 
           <div class="col-2">
             <aside>
-              <h5 class="sidebar-header">Sidebar List</h5>
+              <h6 class="column-header">Sidebar List: ul class "sidebar"</h6>
               <ul class = "sidebar">
                 <li class="sidebar-li">List items use class "sidebar-li"</li>
                 <li class="sidebar-li">List item</li>

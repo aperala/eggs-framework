@@ -4,15 +4,16 @@
   border-radius: $radius;
 }
 
-@mixin navbar-background($default-main-color) {
+@mixin navbar-default-background($default-main-color) {
   background-color: darken($default-main-color, 60%);
 }
 
 @mixin rounded-button($radius) {
   cursor: pointer;
   border-radius: $radius;
-  padding: 5px 2px;
+  padding: 6px 4px;
   text-align: center;
+  margin: auto auto;
   background-color: darken($default-main-color, 50%);
   color: white;
     &:hover {

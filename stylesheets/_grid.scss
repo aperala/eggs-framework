@@ -70,8 +70,8 @@
 // some extra column content styling
 [class*='col-'] > p {
   background-color: $default-paragraph-background; 
-  text-align: left; 
   padding: .5em;
+  font-size: 1.2em;
   color: $default-font-color; 
 }
 

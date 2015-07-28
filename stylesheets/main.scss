@@ -1,7 +1,7 @@
 @import 'eggs-framework';
 
 .dd-button {
-  @include rounded-button(5px);
+  @include rounded-button(15px);
   width: 100px;
 }
 
@@ -11,7 +11,7 @@
 }
 
 #example-rounded {
-  @include rounded-button(7px);
+  @include rounded-button(15px);
   width: 70px;
 }
 

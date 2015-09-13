@@ -73,7 +73,7 @@ form.default-form {
     a {
       padding: .3em;
       text-decoration: none;
-      color: white;
+      color: #fff;
 
       &:hover {
         @include border-radius(5px);
@@ -84,18 +84,32 @@ form.default-form {
     }
 }
 
-// adjust navbar font size for medium-sized screens
-@media all and (max-width:800px){
-  .fixed-top-nav ul {
-    font-size: 20px;
+ul li.selected {
+  @include border-radius(5px);
+  padding: .3em;
+  background-color: #fff;
+
+  a {
+    color: darken($default-main-color, 50%);
   }
 }
 
 // adjust navbar font size for small screens
-@media all and (max-width:650px) {
-  .fixed-top-nav nav ul {
-    margin-right: .5em;
-    font-size: 16px;
+@media (min-width: 320px) and (max-width:568px) {
+  .fixed-top-nav ul {
+    display: none;
+  }
+}
+
+// adjust navbar font size for medium-sized screens
+@media (min-width: 568px) {
+
+  .fixed-top-nav select, .fixed-top-nav button {
+    display: none;
+  }
+
+  .fixed-top-nav ul {
+    font-size: 22px;
   }
 }
 
@@ -126,4 +140,10 @@ form.default-form {
 .sidebar-li {
   padding-left: 2em;
   line-height: 1.3em;
+}
+
+select {
+  width: 94%;
+  margin: 11px  0 11px 2%;
+  float: left;
 }

@@ -2,15 +2,14 @@
 <html>
 <head>
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/main.js"></script>
+ 
   <title>The Eggs Framework</title>
 </head>
 <body class = "speckled-egg-theme">
   <header>
     <nav class = "fixed-top-nav">
       <ul>
-        <li>
+        <li class="selected">
           <a href="#">
             Home
           </a>
@@ -110,16 +109,15 @@
           <div class="col-2">
             <h6 class="column-header">Highlight headers: class "column-header"</h6>
             <p>
-              jQuery drop-down element below uses the classes "dd-button", "dd-button-label", and "drop-down-element"
+              jQuery drop-down element below uses the classes "dd-button", "show", "hide", and "drop-down-element"
             </p>
             <div class="dd-button">
-              <span class="dd-button-label"> Show </span>
+              <span class="dd-button-label"> Show </span>  
             </div>
             <div class="drop-down-element">
               This element toggles open on the button click.
-              Use ".dd-button", ".drop-down-element", ".dd-button-label".
+              Use ".dd-button", ".drop-down-element", ".dd-button-label"
             </div>
-
           </div> 
           <div class="col-2"><p>col-2</p></div> 
           <div class="col-2">
@@ -144,5 +142,7 @@
     </div>
 
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/main.js"></script>
 </body>
 </html>

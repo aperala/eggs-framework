@@ -5,7 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 h1, h2, h3, h4, h5, h6, html, body, div, span, object, iframe,
 ol, ul, li, form, input, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, select, tbody, tfoot, thead, tr, th, td,
 article, aside, details, embed,
 footer, header, hgroup,
 nav, output, section, audio, video {
@@ -271,7 +271,7 @@ form.default-form {
   .fixed-top-nav a {
     padding: .3em;
     text-decoration: none;
-    color: white; }
+    color: #fff; }
     .fixed-top-nav a:hover {
       -webkit-border-radius: 5px;
       -o-border-radius: 5px;
@@ -280,13 +280,24 @@ form.default-form {
       background-color: #fff;
       color: rgba(23, 114, 111, 0.5); }
 
-@media all and (max-width: 800px) {
+ul li.selected {
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: .3em;
+  background-color: #fff; }
+  ul li.selected a {
+    color: rgba(23, 114, 111, 0.5); }
+
+@media (min-width: 320px) and (max-width: 568px) {
   .fixed-top-nav ul {
-    font-size: 20px; } }
-@media all and (max-width: 650px) {
-  .fixed-top-nav nav ul {
-    margin-right: .5em;
-    font-size: 16px; } }
+    display: none; } }
+@media (min-width: 568px) {
+  .fixed-top-nav select, .fixed-top-nav button {
+    display: none; }
+
+  .fixed-top-nav ul {
+    font-size: 22px; } }
 .page-header {
   -webkit-margin-before: 0.67em;
   -webkit-margin-after: 0.67em;
@@ -311,6 +322,11 @@ form.default-form {
 .sidebar-li {
   padding-left: 2em;
   line-height: 1.3em; }
+
+select {
+  width: 94%;
+  margin: 11px  0 11px 2%;
+  float: left; }
 
 .dd-button {
   cursor: pointer;

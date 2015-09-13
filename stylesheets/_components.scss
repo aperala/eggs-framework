@@ -154,8 +154,4 @@ select {
   @include navbar-default-background($default-main-color);
   color: #fff;
 
-  option {
-    @include navbar-default-background($default-main-color);
-    color: #fff;
-  }
 }

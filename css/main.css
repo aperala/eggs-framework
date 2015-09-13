@@ -334,9 +334,6 @@ select {
   float: left;
   background-color: rgba(15, 71, 70, 0.5);
   color: #fff; }
-  select option {
-    background-color: rgba(15, 71, 70, 0.5);
-    color: #fff; }
 
 .dd-button {
   cursor: pointer;

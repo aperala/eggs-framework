@@ -17,6 +17,15 @@ function ToggleElement(){
   });
 }
 
+$(function() {
+  var page_url = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+    $(".fixed-top-nav li a").each(function(){
+      if($(this).attr("href") === page_url || $(this).attr("href") === '' )
+      $(this).parent().addClass("selected");
+    });
+});
+
+
 var $select = $("<select></select>");
 $("nav").append($select);
 
